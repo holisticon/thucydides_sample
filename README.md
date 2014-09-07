@@ -1,6 +1,21 @@
-Thucydides Sample Project
+Thucydides - Oberflächentests mit Stil
 =================
-Thucydides is a tool that lets you use WebDriver-based unit or BDD tests to write more flexible and more reusable WebDriver-based tests, and also to generate documentation about your acceptance tests, including a narrative description of test, along with the corresponding screenshots, and also high-level summaries and aggregations of the test results
-It provides support for running tests and advanced reporting by using BDD, see example in Jenkins [here](https://server.holisticon.de/jenkins/job/thucydides_sample/.
+Wer kennt das nicht: Oberflächen-Tests werden in vielen Projekte stiefmütterlich behandelt. Wenn überhaupt automatisierte Oberflächen-Tests existieren sind diese meist schwer zu pflegen oder sind nicht wirklich stabil. Gerade vor dem Hintergrund von Continous Integration (CI) und Test Driven Development (TDD) eigentlich ein unhaltbarer Umstand. Gerade Oberflächen-Tests sind extrem wertvoll um kritischen Pfade abzutasten, z.B. als Smoke-Test vor einem Live-Deployment. Mit Thucydides ist es möglich Oberflächen-Tests lesbarer, wartbarer und wiederwendbar umzusetzen. Dabei wird das Page-Object-Pattern umgesetzt, um diesen Anforderung umzusetzen.
+Link zum [Live-Beispiel](https://server.holisticon.de/jenkins/job/thucydides_sample/).
+
+Thucydides
+* ist ein Tool für ATDD (acceptance test driven development)
+* ermöglicht lesbare, wartbar und wiederwendbare Oberflächen-Tests 
+* nutzt Selenium als technische Basis
+* kann als Java und JBehave-Variante genutzt werden
+* nutzt Page-Object-Pattern
+    * Page als Model der Webseite mit allen Elemente. 
+    * Steps als Gruppierung der möglichen Interaktionsmöglickeiten, z.B. Klicken
+    * Test ist eine Kollektion von Tests die Benutzereingaben reflektieren und das Ergebnis verifizieren
+* Stellt Reporting für Tracking & Fehlersuche zur Verfügung
+* Wenn Report erstellt wurde, wird er unter target/site abgelegt
+* Kann auch in Maven-Site eingebunden werden
+
+![img](http://holisticon.github.io/presentations/thucydides/assets/thucydides_demo_7.png)
 
 [![Build Status](https://server.holisticon.de/jenkins/buildStatus/icon?job=thucydides_sample)](https://server.holisticon.de/jenkins/job/thucydides_sample/)
